@@ -47,6 +47,13 @@
     },
 
     {
+      "group": "Authentication",
+      "pages": [
+        "auth"
+      ]
+    },
+
+    {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
