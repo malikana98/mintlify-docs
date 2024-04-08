@@ -47,13 +47,6 @@
     },
 
     {
-      "group": "Authentication",
-      "pages": [
-        "auth"
-      ]
-    },
-
-    {
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction"
@@ -62,18 +55,7 @@
     {
       "group": "Account Setup",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
-    },
-
-    {
-      "group": "Account Setups",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "api-reference/endpoint/token"
       ]
     }
   ],

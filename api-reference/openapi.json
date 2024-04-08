@@ -10,7 +10,7 @@
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
+      "url": "https//dumacloud.com/apis/controller"
     }
   ],
   "security": [
@@ -19,6 +19,44 @@
     }
   ],
   "paths": {
+    "/token":{
+      "post":{
+        "description": "Creates a Bearer Token",
+        "requestBody": {
+          "description": "Generate Token",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/generate_token"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "plant response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plant"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/plants": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
@@ -187,7 +225,7 @@
     },
     "securitySchemes": {
       "bearerAuth": {
-        "type": "http",
+        "type": "https",
         "scheme": "bearer"
       }
     }
