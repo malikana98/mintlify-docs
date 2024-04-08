@@ -10,6 +10,7 @@ description: ''
 ## Welcome
 
 Happy Coding! The first step involve signing in and accessing API Keys
+
 <Card
   title="Sign In"
   icon="code"
@@ -20,12 +21,36 @@ Happy Coding! The first step involve signing in and accessing API Keys
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens
+All API endpoints are authenticated using Bearer tokens. 
 
-"api": {
+https://dumacloud.com/apis/controller/generate_token
+
+
+1. User Account ID and API Key are used as Basic Auth
+
+    "api": {
     "auth": {
         "method": "basic",
-        "name": "user-id:user-key"
+        "name": "user account id : api-key"
+    }
+  }
+
+2. The Subscription key is also put in the Headers
+
+    "api": {
+    "headers": {
+        "Subscription": subscription-key
     }
 }
+
+3. Generate the Request to Obtain the Bearer Token
+
+      curl --location 'https://dumacloud.com/apis/controller/generate_token' \
+    --header 'Subscription: <subscription>’ \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Basic  <User_ID> : <API-Key>’ \
+    --data '{}'
+
+
+
 
