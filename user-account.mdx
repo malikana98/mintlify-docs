@@ -3,9 +3,13 @@ title: Create Account
 description: "API for creating a user account"
 ---
 
-## Request
-
 Method: POST
+Bearer Token: <token>
+
+##Headers
+Subscription: <value>
+
+## Request Body
  
 |  Keys  | Values                          |        |
 | -------- | ------------------------------------- |--------|
@@ -32,3 +36,9 @@ Method: POST
 | 31   | British Pound |
 | 32   | European Euro |
 
+## Response Codes
+
+| Code |                         |
+| -------- | ------------------------------------- |
+| 200    | Successful                    |
+| 400     | Error                          |
