@@ -43,6 +43,12 @@
         "create-custom",
         "request-body"
       ]
+    },
+    {
+      "group": "Inventory",
+      "pages": [
+        "modules/inventory/add"
+      ]
     }
   ],
   "footerSocials": {
