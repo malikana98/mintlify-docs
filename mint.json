@@ -31,19 +31,6 @@
       "pages": [
         "introduction"
       ]
-    },
-
-    {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Account Setup",
-      "pages": [
-        "api-reference/endpoint/token"
-      ]
     }
   ],
   "footerSocials": {
