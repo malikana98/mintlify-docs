@@ -1,24 +1,25 @@
 ---
-title: Get Request Body
-description: "Module APIs are dynamic. This endpoints lists the custom fields per account"
+title: Get Request Body API
+description: "Module APIs are dynamic. This endpoint lists the custom fields per account."
 ---
 
 Method: POST
-Bearer Token: <token>
+Bearer Token: Replace this with an actual token in the request
 
 ## Headers
-Subscription: <value>
-Access_Token: <value>
+Subscription: Replace this with the subscription value
+Access_Token: Replace this with the actual access token value
 
 ## Request Body
-| Key |   Values                     |
-| -------- | ------------------------------------- |
-| module    | Enter the name of the form module                   |
+| Key    | Values                            |
+| ------ | --------------------------------- |
+| module | Enter the name of the form module |
+
+- `module`: String - The name of the form module.
 
 ## Response Codes
 
-| Code |                         |
-| -------- | ------------------------------------- |
-| 201    | Successful                    |
-| 404     | Error: Not found                        |
-                      |
+| Code | Description             |
+| ---- | ----------------------- |
+| 201  | Successful              |
+| 404  | Error: Not found        |

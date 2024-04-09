@@ -1,56 +1,50 @@
 ---
-title: Create Custom Field
-description: ""
+title: Create Custom Field API
+description: "Create a custom field for a specified module."
 ---
 
 Method: POST
-Bearer Token: <token>
+Bearer Token: Replace this with an actual token in the request
 
-##Headers
-Subscription: <value>
-Access_Token: <value>
+## Headers
+Subscription: Replace this with the subscription value
+Access_Token: Replace this with the actual access token value
 
 ## Request Body
- 
-|  Keys  | Values                          |        |
-| -------- | ------------------------------------- |--------|
-| name     | Name of the custom field                    |  Required      |
-| module   | Enter the target module                         |    Required    |
-| description   | Provide short description |   Required     |    
-| datatype   | Enter the data type |    Required    |
-| requirement   | Do you want the field to be a requirement |    Required    |
-| uniqueness   | Should the entries be unique? |  Required      |  
 
-## Data Types
+| Key          | Values                          | Required |
+| ------------ | ------------------------------- | -------- |
+| name         | Name of the custom field        | Yes      |
+| module       | Target module                   | Yes      |
+| description  | Short description               | Yes      |
+| datatype     | Data type                       | Yes      |
+| requirement  | Is the field required?          | Yes      |
+| uniqueness   | Should entries be unique?       | Yes      |
 
-| Data Type |                         |
-| -------- | ------------------------------------- |
-| string   | String (A-Z,a-z)                   |
-| numeric     | Numbers (0-9)                          |
-| email     | Email Address                         |
-| url    | URL Link                         |
+- `datatype`: string (A-Z,a-z), numeric (0-9), email, url
+- `requirement`, `uniqueness`: Boolean (true/false)
 
 ## Modules
 
-| Name        |     Description                    | Module |
-| -------- | ------------------------------------- | --------|
-| add_supplier   | Form for adding suppliers    |  Suppliers        |
-| add_service     | Form for adding a service       |   Services          |
-| add_sale     | When adding a sale                  | Sales       |
-| employee_info    |  Adding Employee                    | Payroll |
-| add_liability    |  Adding Liability                    | Liability |
-| add_inventory    |  Adding Inventory                  | Inventory |
-| restock_inventory    |  Restocking Inventory                    | Inventory |
-| inventory_adjustment   |  Adjusting inventory quantities due to damage or theft                  | Inventory |
-| add_expense    |  Adding Employee                    | Expenses |
-| add_equity    |  Adding Equity                   | Equity |
-| add_customer    |  Adding Customer                   | Customers |
-| add_asset    |  Adding Asset                    | Assets |
+| Name                | Description                      | Module    |
+| ------------------- | -------------------------------- | --------- |
+| add_supplier        | Form for adding suppliers        | Suppliers |
+| add_service         | Form for adding a service         | Services  |
+| add_sale            | When adding a sale                | Sales     |
+| employee_info       | Adding Employee                   | Payroll   |
+| add_liability       | Adding Liability                  | Liability |
+| add_inventory       | Adding Inventory                  | Inventory |
+| restock_inventory   | Restocking Inventory              | Inventory |
+| inventory_adjustment| Adjusting inventory quantities due to damage or theft | Inventory |
+| add_expense         | Adding Employee                   | Expenses  |
+| add_equity          | Adding Equity                    | Equity    |
+| add_customer        | Adding Customer                   | Customers |
+| add_asset           | Adding Asset                      | Assets    |
 
 ## Response Codes
 
-| Code |                         |
-| -------- | ------------------------------------- |
-| 201    | Successful                    |
-| 500     | Internal server error                        |
-| 401     | Field name for the module already exists                         |
+| Code | Description                                 |
+| ---- | ------------------------------------------- |
+| 201  | Successful                                  |
+| 500  | Internal server error                       |
+| 401  | Field name for the module already exists    |

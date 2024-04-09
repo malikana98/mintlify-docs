@@ -1,19 +1,19 @@
 ---
-title: Refresh Token
+title: Refresh Token API
 description: "Generate Access Token using Refresh Token"
 ---
 
 Method: POST
-Bearer Token: <token>
+Bearer Token: Replace this with an actual token in the request
 
-##Headers
-Subscription: <value>
-Refresh_Token: <value>
+## Headers
+Subscription: Replace this with the subscription value
+Refresh_Token: Replace this with the actual refresh token value
 
 ## Response Codes
 
-| Code |                         |
-| -------- | ------------------------------------- |
-| 200    | Successful                    |
-| 400     | Error: Refresh token is invalid or has expired                        |
-| 401     | Refresh token expired. Sign in again                       |
+| Code | Description                                            |
+| ---- | ------------------------------------------------------ |
+| 200  | Successful                                             |
+| 400  | Error: Refresh token is invalid or has expired         |
+| 401  | Refresh token expired. Sign in again                   |

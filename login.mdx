@@ -1,26 +1,27 @@
 ---
-title: Login
-description: 'Login  as a user'
+title: Login API
+description: 'Login as a user'
 ---
 
 Method: POST
-Bearer Token: <token>
+Bearer Token: Replace this with an actual token in the request
+## Headers
+Subscription: Replace this with the subscription value
 
-##Headers
-Subscription: <value>
+## Request Body
 
+| Keys     | Values                                     | Required |
+| -------- | ------------------------------------------ | -------- |
+| username | The unique username for the user           | Yes      |
+| password | Password with a minimum of 8 characters    | Yes      |
 
-##Request Body
- 
-|  Keys  | Values                                  |        |
-| -------- | ------------------------------------- |--------|
-| username   | The unique username for the user |    Required    | 
-| password   | Password with minimum of 8 characters |   Required     | 
-  
-##Response Codes
+- `username`: String
+- `password`: String
 
-| Code |                         |
-| -------- | ------------------------------------- |
-| 200    | Successful                    |
-| 400     | Error                          |
-| 404     | Account not found                        |
+## Response Codes
+
+| Code | Description                           |
+| ---- | ------------------------------------- |
+| 200  | Successful                            |
+| 400  | Bad Request: Invalid username or password |
+| 404  | Not Found: Account not found         |
