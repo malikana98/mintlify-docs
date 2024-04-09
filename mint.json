@@ -37,11 +37,7 @@
       "pages": [
         "bearer",
         "user-account",
-        "login",
-        "refresh",
-        "profile",
-        "create-custom",
-        "request-body"
+        "login"
       ]
     },
     {
