@@ -36,7 +36,11 @@
       "group": "User Account",
       "pages": [
         "user-account",
-        "login"
+        "login",
+        "refresh",
+        "profile",
+        "create-custom",
+        "request-body"
       ]
     }
   ],
