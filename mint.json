@@ -33,9 +33,10 @@
       ]
     },
     {
-      "group": "Account Settings",
+      "group": "User Account",
       "pages": [
-        "user-account"
+        "user-account",
+        "login"
       ]
     }
   ],

@@ -1,0 +1,26 @@
+---
+title: Login
+description: "Login  as a user"
+---
+
+Method: POST
+Bearer Token: <token>
+
+##Headers
+Subscription: <value>
+
+
+## Request Body
+ 
+|  Keys  | Values                          |        |
+| -------- | ------------------------------------- |--------|
+| username   | The unique username for the user |    Required    | 
+| password   | Password with minimum of 8 characters |   Required     | 
+  
+## Response Codes
+
+| Code |                         |
+| -------- | ------------------------------------- |
+| 200    | Successful                    |
+| 400     | Error                          |
+| 404     | Account not found                        |
