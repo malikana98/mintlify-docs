@@ -35,6 +35,7 @@
     {
       "group": "User Account",
       "pages": [
+        "jwt-token",
         "user-account",
         "login",
         "refresh",
