@@ -37,9 +37,17 @@ description: "API for creating a user account"
 | 31   | British Pound |
 | 32   | European Euro |
 
-## Response Codes
+Below is an example of the request body
 
-| Code |                         |
-| -------- | ------------------------------------- |
-| 201    | Successful                    |
-| 400     | Error                          |
+```json
+    {
+    "forename":"John",
+    "surname":"Doll",
+    "email": "john@example.com",
+    "username":"john32",
+    "phoneNumber" : "023232323",
+    "businessName" : "Bizy Ban Limited",
+    "currency" :1,
+    "password" : "Testingpazz12"
+    }
+ 
