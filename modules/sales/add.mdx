@@ -18,11 +18,11 @@ description: "Endpoint for adding sales."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| uid          | Enter a unique sale id    | Yes      |
-| customer_id       | Enter the customer id for known customers or `open` when selling to the open market  | Yes      |
-| payment   | Enter payment method. Value should be cash,bank or credit       | Yes      |
-| date   | Enter date of the sale      | Yes      |
-| items   | Nested json of a items   | Yes      |
+| uid           | Enter a unique sale id    | Yes      |
+| customer_id   | Enter the customer id for known customers or `open` when selling to the open market  | Yes      |
+| payment       | Enter payment method. Value should be cash,bank or credit       | Yes      |
+| date          | Enter date of the sale      | Yes      |
+| items         | Nested json of a items   | Yes      |
 
 ## Json of the Items Key
 
@@ -30,14 +30,20 @@ description: "Endpoint for adding sales."
 | ------------- | ------------------------------- | -------- |
 | code          | Inventory or service code of the sold item   | Yes      |
 | quantity      | Enter quantity of the sold item.  | Yes      |
-| unit_price   | Price at which you sold the item       | Yes      |
-| category   | Enter item category of the item. Value should either be `inventory` or `service`  | Yes      |
+| unit_price    | Price at which you sold the item       | Yes      |
+| category      | Enter item category of the item. Value should either be `inventory` or `service`  | Yes      |
 
+## Response Codes
 
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
 
 Below is an example of json request body
 
-``json
+```json
     {
         "uid":2,
         "customer_id":"open",
@@ -54,10 +60,3 @@ Below is an example of json request body
         
     }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |
