@@ -1,0 +1,63 @@
+---
+title: Add Sale
+description: "Endpoint for adding sales."
+---
+
+**URL:** `{{base_url}}/modules/revenue/add`  <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| uid          | Enter a unique sale id    | Yes      |
+| customer_id       | Enter the customer id for known customers or `open` when selling to the open market  | Yes      |
+| payment   | Enter payment method. Value should be cash,bank or credit       | Yes      |
+| date   | Enter date of the sale      | Yes      |
+| items   | Nested json of a items   | Yes      |
+
+## Json of the Items Key
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| code          | Inventory or service code of the sold item   | Yes      |
+| quantity      | Enter quantity of the sold item.  | Yes      |
+| unit_price   | Price at which you sold the item       | Yes      |
+| category   | Enter item category of the item. Value should either be `inventory` or `service`  | Yes      |
+
+
+
+Below is an example of json request body
+
+``json
+    {
+        "uid":2,
+        "customer_id":"open",
+        "payment":"cash",
+        "date":"2024-01-02",
+        "items":[
+            {
+            "code": 101,
+            "quantity":10,
+            "unit_price":50,
+            "category":"inventory"
+        }
+        ]
+        
+    }
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

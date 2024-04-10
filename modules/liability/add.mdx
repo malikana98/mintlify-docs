@@ -1,0 +1,43 @@
+---
+title: Add Liability
+description: "Endpoint for adding a liability."
+---
+
+**URL:** `{{base_url}}/modules/liability/add`  <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| date          | Date of liability              | Yes      |
+| name          | Name or description of the liability | Yes      |
+| category      | Type of liability. Value should be `non_current` or `current` | Yes      |
+| amount        | Amount of the liability        | Yes      |
+| payment_method| Payment method. Value should be `cash` or `bank`   | Yes      |
+
+Below is an example of a JSON request body:
+
+```json
+{
+    "date": "2024-01-02",
+    "name": "Loan from Bank A",
+    "category": "non_current",
+    "amount": 2000,
+    "payment_method": "bank"
+}
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

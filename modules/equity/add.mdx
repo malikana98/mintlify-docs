@@ -1,0 +1,44 @@
+---
+title: Add Equity
+description: "Endpoint for equity."
+---
+
+**URL:** `{{base_url}}/modules/equity/add`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key            | Values                          | Required |
+| -------------- | ------------------------------- | -------- |
+| date           | Date of transaction             | Yes      |
+| name           | Name or short narration         | Yes      |
+| category       | Value should be `dividend`, `capital`, or `drawing` | Yes |
+| value          | Enter amount                    | Yes      |
+| payment_method | Value should be `bank` or `cash`| Yes      |
+
+Example of request body
+
+```json
+{
+    "date": "2023-01-02",
+    "name": "Capital",
+    "category": "capital",
+    "value": 100000,
+    "payment_method": "bank"
+}
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

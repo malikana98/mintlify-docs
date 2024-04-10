@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Expense Repayment
+description: "Endpoint for making expenses repayment."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/expenses/repayment`  <br />
 
 **Method:** POST <br />
 
@@ -18,9 +18,18 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| amount   | Enter repayment amount   | Yes      |
+| expense_number   | Enter expense number   | Yes      |
+| payment_method   | Enter payment method. Value should either be `cash` or `bank`   | Yes      |
+
+Below is an example of json request body
+
+```json
+    {
+   "expense_number":2,
+   "amount":2000,
+   "payment_method":"bank"
+  }
 
 
 ## Response Codes

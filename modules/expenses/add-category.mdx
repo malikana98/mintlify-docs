@@ -1,16 +1,16 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Add Expense Category
+description: "Endpoint for adding expense category."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/expenses/addCategory`
 
-**Method:** POST <br />
+**Method:** POST
 
 **Bearer Token:** Replace this with an actual token in the request
 
 ## Headers
-**Subscription:** Replace this with the subscription value <br />
+**Subscription:** Replace this with the subscription value
 
 **Access_Token:** Replace this with the actual access token value
 
@@ -18,9 +18,16 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| name          | Enter the category name         | Yes      |
+| category      | Value should either be `direct` or `indirect` | Yes      |
+
+Below is an example of json request body
+
+```json
+{
+    "name":"Rent",
+    "category":"indirect"
+}
 
 
 ## Response Codes
@@ -29,4 +36,5 @@ description: "Endpoint for adding inventory items."
 | ---- | ---------------------------------- |
 | 201  | Successful                         |
 | 500  | Internal Server Error              |
+| 400  | Invalid entry  |
 | 401  | Unauthorized: Check error message  |

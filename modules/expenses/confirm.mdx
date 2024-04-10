@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Confirm Expense
+description: "Confirming Expense"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/expenses/confirm` <br />
 
 **Method:** POST <br />
 
@@ -18,15 +18,21 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| expense_number | Enter the expense number        | Yes      |
+| action        | Value should be `confirmed` or `declined` | Yes      |
+
+Example JSON request body:
+```json
+{
+    "expense_number": 1,
+    "action": "confirmed"
+}
 
 
 ## Response Codes
 
 | Code | Description                        |
 | ---- | ---------------------------------- |
-| 201  | Successful                         |
+| 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |

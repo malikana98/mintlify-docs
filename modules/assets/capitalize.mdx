@@ -1,0 +1,40 @@
+---
+title: Asset Capitalization
+description: "Endpoint for capitalizing an asset."
+---
+
+**URL:** `{{base_url}}/modules/assets/capitalize` <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key                | Values                                   | Required |
+| ------------------ | ---------------------------------------- | -------- |
+| asset_number       | Enter asset number                       | Yes      |
+| depreciation_rate  | Enter depreciation rate                  | Yes      |
+| depreciation_type  | Value should either be `straight_line` or `reducing_balance` | Yes      |
+
+Example of request body:
+
+```json
+{
+  "asset_number": "AST-4",
+  "depreciation_rate": 5,
+  "depreciation_type": "straight_line"
+}
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

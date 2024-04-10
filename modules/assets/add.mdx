@@ -1,0 +1,48 @@
+---
+title: Add Asset
+description: "Endpoint for adding assets."
+---
+
+**URL:** `{{base_url}}/modules/assets/add`  <br />
+
+**Method:** POST  <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value  <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| date          | Date of asset acquisition      | Yes      |
+| name          | Name of the asset              | Yes      |
+| category      | Type of asset. Value should either be `non_current` or `current` | Yes      |
+| value         | Enter the amount of acquisition| Yes      |
+| asset_number  | Enter asset number             | Yes      |
+| payment       | Enter payment method. Value should either be `credit`, `cash` or `bank` | Yes      |
+| supplier      | Enter supplier ID (Optional)   | No       |
+
+Example JSON Request Body:
+
+```json
+{
+  "date": "2024-01-01",
+  "name": "HP Laptop",
+  "category": "non_current",
+  "value": "5000",
+  "asset_number": "AST-4",
+  "payment": "credit"
+}
+
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

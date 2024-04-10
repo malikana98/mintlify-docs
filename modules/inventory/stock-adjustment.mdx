@@ -1,0 +1,31 @@
+---
+title: Stock Adjustment
+description: "Adjusting stock levels due to inventory damage, expiry, theft or transfer to Cost of Sales for use as raw material"
+---
+
+**URL:** `{{base_url}}/modules/inventory/stock_adjustment` <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key       | Values                                                        | Required |
+| --------- | ------------------------------------------------------------- | -------- |
+| code      | Product Code                                                  | Yes      |
+| quantity  | Quantity you want to reduce                                   | Yes      |
+| purpose   | Purpose of the adjustment (`cog_adjustment` or `damage_adjustment`) | Yes      |
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

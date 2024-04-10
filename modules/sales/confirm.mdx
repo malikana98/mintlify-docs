@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Confirm Sale
+description: "Endpoint for confirming sales"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/revenue/confirm_sale`  <br />
 
 **Method:** POST <br />
 
@@ -18,15 +18,14 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
-
+| uid      | External Sales Unique Id       | Yes      |
+| action      | Value should either be `confirmed` or `declined`  | Yes      |
 
 ## Response Codes
 
 | Code | Description                        |
 | ---- | ---------------------------------- |
-| 201  | Successful                         |
+| 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+

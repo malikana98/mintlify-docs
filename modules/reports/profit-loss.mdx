@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Income Statement
+description: "Endpoint for accessing income statement"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/reports/profitAndLoss`  <br />
 
 **Method:** POST <br />
 
@@ -18,10 +18,16 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| starting_date | Starting date                   | Yes      |
+| ending_date   | Ending date                     | Yes      |
 
+Example of a JSON Request Body
+
+  ```json 
+    {
+    "starting_date":"2020-01-01",
+    "ending_date":"2024-12-01"
+    }
 
 ## Response Codes
 
@@ -30,3 +36,4 @@ description: "Endpoint for adding inventory items."
 | 201  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+

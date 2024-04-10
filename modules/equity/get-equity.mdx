@@ -1,0 +1,36 @@
+---
+title: Get Equity
+description: "Endpoint for getting equity using id."
+---
+
+**URL:** `{{base_url}}/modules/equity/getEquity`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key     | Values          | Required |
+| ------- | --------------- | -------- |
+| id      | Equity ID       | Yes      |
+
+Example of request body
+
+```json
+{
+    "id": 1
+}
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 200  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

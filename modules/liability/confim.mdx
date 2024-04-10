@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Confirm Liability
+description: "Confirming Liability"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/liability/confirm` <br />
 
 **Method:** POST <br />
 
@@ -16,12 +16,16 @@ description: "Endpoint for adding inventory items."
 
 ## Request Body
 
-| Key           | Values                          | Required |
-| ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| Key               | Values     | Required |
+| ----------------- | ------------- | -------- |
+| liability_number  | Enter the liability number    | Yes      |
+| action            | Value should either be `confirmed` or `declined`   | Yes      |
 
+Example of json body
+    {
+    "liability_number":1,
+    "action": "confirmed"
+    }
 
 ## Response Codes
 

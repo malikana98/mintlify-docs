@@ -1,0 +1,33 @@
+---
+title: Restock
+description: "Restocking Inventory Catalogue"
+---
+
+**URL:** `{{base_url}}/modules/inventory/restock` <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key       | Values                                       | Required |
+| --------- | -------------------------------------------- | -------- |
+| code      | Enter Product                                | Yes      |
+| quantity  | Quantity being restocked as an integer or float | Yes      |
+| price     | Selling price of the inventory               | Yes      |
+| cost      | Cost of sales when acquiring the inventory   | Yes      |
+| supplier  | Enter supplier ID (Optional)                 | No       |
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

@@ -1,0 +1,29 @@
+---
+title: Reverse Approval
+description: "Endpoint for reversing approved asset to pending status"
+---
+
+**URL:** `{{base_url}}/modules/assets/reverse_approval`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                                   | Required |
+| ------------- | ---------------------------------------- | -------- |
+| asset_number  | Enter the external unique asset number   | Yes      |
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 200  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

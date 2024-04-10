@@ -1,0 +1,41 @@
+---
+title: Asset Repayment
+description: "Endpoint for making asset repayment."
+---
+
+**URL:** `{{base_url}}/modules/assets/repayment`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key          | Values                           | Required |
+| ------------ | -------------------------------- | -------- |
+| amount       | Enter repayment amount           | Yes      |
+| asset_number | Enter asset number               | Yes      |
+| payment      | Enter payment method. Value should be either `cash` or `bank` | Yes      |
+
+Example JSON Request Body:
+
+```json
+{
+  "amount": "4000",
+  "asset_number": "AST-4",
+  "payment": "bank"
+}
+
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

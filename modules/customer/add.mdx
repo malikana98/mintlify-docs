@@ -1,0 +1,31 @@
+---
+title: Add Customer
+description: "Endpoint for Adding Customers"
+---
+
+**URL:** `{{base_url}}/modules/customers/add`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key       | Values                          | Required |
+| --------- | ------------------------------- | -------- |
+| forename  | Forename of the customer        | Yes      |
+| surname   | Surname of the customer         | Yes      |
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+

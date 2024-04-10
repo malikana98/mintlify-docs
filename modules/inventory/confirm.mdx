@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Confirm Restock
+description: "Confirming Restock of Inventory"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/inventory/restock_approval` <br />
 
 **Method:** POST <br />
 
@@ -16,12 +16,10 @@ description: "Endpoint for adding inventory items."
 
 ## Request Body
 
-| Key           | Values                          | Required |
-| ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
-
+| Key   | Values        | Required |
+| ----- | ------------- | -------- |
+| id    | Restock Id    | Yes      |
+| code  | Product Code  | Yes      |
 
 ## Response Codes
 

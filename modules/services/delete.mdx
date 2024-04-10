@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Delete Service
+description: "Delete Pending Services"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/services/delete_pending_service` <br />
 
 **Method:** POST <br />
 
@@ -16,12 +16,10 @@ description: "Endpoint for adding inventory items."
 
 ## Request Body
 
-| Key           | Values                          | Required |
-| ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
-
+| Key   | Values        | Required |
+| ----- | ------------- | -------- |
+| id    | Service Id    | Yes      |
+| code  | Product Code  | Yes      |
 
 ## Response Codes
 

@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Get Liability
+description: "Endpoint for getting liability by ID."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/liability/getLiability`  <br />
 
 **Method:** POST <br />
 
@@ -16,12 +16,17 @@ description: "Endpoint for adding inventory items."
 
 ## Request Body
 
-| Key           | Values                          | Required |
-| ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| Key              | Values                          | Required |
+| ---------------- | ------------------------------- | -------- |
+| liability_number | Enter liability number   | Yes      |
 
+
+Below is an example of json request body
+
+``json
+    { 
+       "liability_number":1,
+    }
 
 ## Response Codes
 

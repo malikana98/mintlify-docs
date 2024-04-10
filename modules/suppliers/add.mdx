@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Add Suppliers
+description: "Endpoint for adding suppliers"
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/suppliers/add`  <br />
 
 **Method:** POST <br />
 
@@ -18,9 +18,8 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| forename      | Forename of the supplier        | Yes      |
+| surname       | Surname of the supplier         | Yes      |
 
 
 ## Response Codes
@@ -30,3 +29,4 @@ description: "Endpoint for adding inventory items."
 | 201  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+

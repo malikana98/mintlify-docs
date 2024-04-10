@@ -1,0 +1,47 @@
+---
+title: Add Expense
+description: "Endpoint for adding an expense."
+---
+
+**URL:** `{{base_url}}/modules/expenses/addExpense`
+
+**Method:** POST
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| date          | Date                             | Yes      |
+| expense_number   | Enter the unique expense number | Yes      |
+| category_id   | Refer to the `Expense Categories` endpoint to get the ID of the categories | Yes      |
+| amount   | Enter the amount                  | Yes      |
+| payment   | Enter payment method. Value should either be `cash`, `bank` or `credit`  | Yes      |
+| narration   | Enter narration of the expenses but not more than 500 characters | Yes      |
+
+Example of a JSON request body:
+
+```json
+{
+    "date": "2024-01-02",
+    "amount": 2000,
+    "category_id": 35,
+    "narration": "Maintenance of the cars",
+    "expense_number": 3,
+    "payment": "credit"
+}
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 400  | Invalid entry  |
+| 401  | Unauthorized: Check error message  |

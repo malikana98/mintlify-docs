@@ -1,16 +1,16 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Clear Credit
+description: "Endpoint for clearing credit status of assets bought on credit."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/assets/clear_credit`
 
-**Method:** POST <br />
+**Method:** POST
 
 **Bearer Token:** Replace this with an actual token in the request
 
 ## Headers
-**Subscription:** Replace this with the subscription value <br />
+**Subscription:** Replace this with the subscription value
 
 **Access_Token:** Replace this with the actual access token value
 
@@ -18,15 +18,13 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| asset_number  | Enter asset number              | Yes      |
 
 
 ## Response Codes
 
 | Code | Description                        |
 | ---- | ---------------------------------- |
-| 201  | Successful                         |
+| 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |

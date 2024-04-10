@@ -1,0 +1,58 @@
+---
+title: Add Employee Salary
+description: "Endpoint for adding employee salary."
+---
+
+**URL:** `{{base_url}}/modules/payroll/add_salary_to_employee`  <br />
+
+**Method:** POST <br />
+
+**Bearer Token:** Replace this with an actual token in the request
+
+## Headers
+**Subscription:** Replace this with the subscription value <br />
+
+**Access_Token:** Replace this with the actual access token value
+
+## Request Body
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| uid           | Enter external employee unique id. Value can be `string` or `int`   | Yes      |
+| salary_items  | Enter a json of salary items     | Yes      |
+
+##Json body for Salary Items
+
+| Key           | Values                          | Required |
+| ------------- | ------------------------------- | -------- |
+| item_id       | Enter item id                   | Yes      |
+| amount        | Enter amount                    | Yes      |
+
+Example of Request Body
+
+ ```json
+    {
+        "employee_uid":1,
+        "salary_items":[
+            {
+                    "item_id":1,
+                    "amount":4500
+             },
+                    {
+                    "item_id":2,
+                    "amount":1500
+                },
+                    {
+                    "item_id":3,
+                    "amount":1000
+                }
+            ]
+    }
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |

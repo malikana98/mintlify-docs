@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Get Employee
+description: "Endpoint for getting employee details by ID."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/payroll/getEmployee`  <br />
 
 **Method:** POST <br />
 
@@ -18,15 +18,13 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| uid           | Enter employee unique id   | Yes      |
 
 
 ## Response Codes
 
 | Code | Description                        |
 | ---- | ---------------------------------- |
-| 201  | Successful                         |
+| 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |

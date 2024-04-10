@@ -1,9 +1,9 @@
 ---
-title: Add Inventory
-description: "Endpoint for adding inventory items."
+title: Pay Salaries
+description: "Endpoint for paying salaries."
 ---
 
-**URL:** `{{base_url}}/modules/inventory/add_inventory`  <br />
+**URL:** `{{base_url}}/modules/payroll/pay_salaries`  <br />
 
 **Method:** POST <br />
 
@@ -18,15 +18,23 @@ description: "Endpoint for adding inventory items."
 
 | Key           | Values                          | Required |
 | ------------- | ------------------------------- | -------- |
-| code          | Enter a unique code             | Yes      |
-| product       | Product name                    | Yes      |
-| description   | Enter product description       | Yes      |
+| uid           | Enter employee unique id   | Yes      |
+| narration     | Enter short narration   | Yes      |
+| calculate_tax | State whether tax and statutory contributions should be included on the payslip.Value should either be `yes` or `no`   | Yes      |
 
+Example of Request Body
+
+ ```json
+    {
+        "uid": 1,
+        "narration":January salaries,
+        "calculate_tax":"yes"
+    }
 
 ## Response Codes
 
 | Code | Description                        |
 | ---- | ---------------------------------- |
-| 201  | Successful                         |
+| 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |

@@ -47,13 +47,121 @@
     {
       "group": "Inventory",
       "pages": [
-        "modules/inventory/add"
+        "modules/inventory/inventory",
+        "modules/inventory/add",
+        "modules/inventory/inv-pending-list",
+        "modules/inventory/approve",
+        "modules/inventory/list",
+        "modules/inventory/restock",
+        "modules/inventory/pending-restock",
+        "modules/inventory/confirm",
+        "modules/inventory/stock-adjustment"
+      ]
+    },
+    {
+      "group": "Service",
+      "pages": [
+        "modules/services/list",
+        "modules/services/add",
+        "modules/services/confirm",
+        "modules/services/delete"
+      ]
+    },
+    {
+      "group": "Customer",
+      "pages": [
+        "modules/customer/list",
+        "modules/customer/add"
+      ]
+    },
+    {
+      "group": "Supplier",
+      "pages": [
+        "modules/suppliers/list",
+        "modules/suppliers/add"
+      ]
+    },
+    {
+      "group": "Sales",
+      "pages": [
+        "modules/sales/list",
+        "modules/sales/add",
+        "modules/sales/confirm",
+        "modules/sales/get-sale",
+        "modules/sales/repayment",
+        "modules/sales/clear-invoice",
+        "modules/sales/reverse"
+      ]
+    },
+    {
+      "group": "Expenses",
+      "pages": [
+        "modules/expenses/list",
+        "modules/expenses/list-category",
+        "modules/expenses/add-category",
+        "modules/expenses/add",
+        "modules/expenses/get-expense",
+        "modules/expenses/confirm",
+        "modules/expenses/repayment",
+        "modules/expenses/clear-credit"
+      ]
+    },
+    {
+      "group": "Payroll",
+      "pages": [
+        "modules/payroll/employees",
+        "modules/payroll/add-employee",
+        "modules/payroll/add-salary-items",
+        "modules/payroll/add-employee-salary",
+        "modules/payroll/get-employee",
+        "modules/payroll/confirm",
+        "modules/payroll/salary-items",
+        "modules/payroll/pay-salaries",
+        "modules/payroll/pay-salaries"
+      ]
+    },
+    {
+      "group": "Assets",
+      "pages": [
+        "modules/assets/list",
+        "modules/assets/add",
+        "modules/assets/confirm",
+        "modules/assets/capitalize",
+        "modules/assets/repayment",
+        "modules/assets/clear-credit",
+        "modules/assets/reverse-approval",
+        "modules/assets/reverse-capitalization"
+      ]
+    },
+    {
+      "group": "Liability",
+      "pages": [
+        "modules/liability/list",
+        "modules/liability/add",
+        "modules/liability/confirm",
+        "modules/liability/get-liability",
+        "modules/liability/repayment",
+        "modules/liability/clear-credit"
+      ]
+    },
+    {
+      "group": "Equity",
+      "pages": [
+        "modules/equity/list",
+        "modules/equity/add",
+        "modules/equity/confirm",
+        "modules/equity/get-equity"
+      ]
+    },
+    {
+      "group": "Reports",
+      "pages": [
+        "modules/reports/profit-loss"
       ]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/dumacloud",
+    "linkedin": "https://www.linkedin.com/company/dumacloud"
   }
 }
