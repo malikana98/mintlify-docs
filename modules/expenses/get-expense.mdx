@@ -21,6 +21,15 @@ description: "Endpoint for getting expenses by ID."
 | expense_number  | Enter expense number   | Yes      |
 
 
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 200  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of json request body:
 
 ```json
@@ -29,10 +38,3 @@ Example of json request body:
 }
 
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 200  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

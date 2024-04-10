@@ -3,14 +3,14 @@ title: Confirm Equity
 description: "Endpoint for confirming equity."
 ---
 
-**URL:** `{{base_url}}/modules/equity/approve`
+**URL:** `{{base_url}}/modules/equity/approve`  <br />
 
-**Method:** POST
+**Method:** POST  <br />
 
 **Bearer Token:** Replace this with an actual token in the request
 
 ## Headers
-**Subscription:** Replace this with the subscription value
+**Subscription:** Replace this with the subscription value  <br />
 
 **Access_Token:** Replace this with the actual access token value
 
@@ -21,13 +21,6 @@ description: "Endpoint for confirming equity."
 | id      | Equity ID                        | Yes      |
 | action  | Value should either be `confirmed` or `declined` | Yes      |
 
-Example of request body
-
-```json
-{
-    "id": 1,
-    "action": "confirmed"
-}
 
 ## Response Codes
 
@@ -36,3 +29,13 @@ Example of request body
 | 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+
+Example of request body
+
+```json
+{
+    "id": 1,
+    "action": "confirmed"
+}
+
+

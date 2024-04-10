@@ -22,6 +22,15 @@ description: "Endpoint for capitalizing an asset."
 | depreciation_rate  | Enter depreciation rate                  | Yes      |
 | depreciation_type  | Value should either be `straight_line` or `reducing_balance` | Yes      |
 
+##Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of request body:
 
 ```json
@@ -31,10 +40,3 @@ Example of request body:
   "depreciation_type": "straight_line"
 }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

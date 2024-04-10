@@ -20,6 +20,13 @@ description: "Endpoint for adding employee."
 | ------------- | ------------------------------- | -------- |
 | uid           | Enter external employee unique id. Value can be `string` or `int`   | Yes      |
 
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
 
 Example of Request Body
 
@@ -28,10 +35,4 @@ Example of Request Body
         "uid": "emp-1"
     }
 
-## Response Codes
 
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

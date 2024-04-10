@@ -22,6 +22,16 @@ description: "Endpoint for paying salaries."
 | narration     | Enter short narration   | Yes      |
 | calculate_tax | State whether tax and statutory contributions should be included on the payslip.Value should either be `yes` or `no`   | Yes      |
 
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 200  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of Request Body
 
  ```json
@@ -31,10 +41,3 @@ Example of Request Body
         "calculate_tax":"yes"
     }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 200  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

@@ -23,6 +23,15 @@ description: "Endpoint for adding a liability."
 | amount        | Amount of the liability        | Yes      |
 | payment_method| Payment method. Value should be `cash` or `bank`   | Yes      |
 
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Below is an example of a JSON request body:
 
 ```json
@@ -34,10 +43,3 @@ Below is an example of a JSON request body:
     "payment_method": "bank"
 }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

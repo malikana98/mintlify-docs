@@ -21,12 +21,6 @@ description: "Confirming Liability"
 | liability_number  | Enter the liability number    | Yes      |
 | action            | Value should either be `confirmed` or `declined`   | Yes      |
 
-Example of json body
-    {
-    "liability_number":1,
-    "action": "confirmed"
-    }
-
 ## Response Codes
 
 | Code | Description                        |
@@ -34,3 +28,11 @@ Example of json body
 | 201  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+
+Example of json body
+    {
+    "liability_number":1,
+    "action": "confirmed"
+    }
+
+

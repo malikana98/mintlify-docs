@@ -27,6 +27,15 @@ description: "Endpoint for adding salary item."
 | name          | Add name  | Yes      |  
 | category      | Add category. Value should be `basic_pay`,`allowance` or `deduction`  | Yes      |  
 
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 200  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
 Example of Request Body
 
  ```json
@@ -48,10 +57,4 @@ Example of Request Body
         
     }
 
-## Response Codes
 
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 200  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

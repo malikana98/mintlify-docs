@@ -3,14 +3,14 @@ title: Add Equity
 description: "Endpoint for equity."
 ---
 
-**URL:** `{{base_url}}/modules/equity/add`
+**URL:** `{{base_url}}/modules/equity/add`  <br />
 
-**Method:** POST
+**Method:** POST  <br />
 
 **Bearer Token:** Replace this with an actual token in the request
 
 ## Headers
-**Subscription:** Replace this with the subscription value
+**Subscription:** Replace this with the subscription value.  <br />
 
 **Access_Token:** Replace this with the actual access token value
 
@@ -24,6 +24,16 @@ description: "Endpoint for equity."
 | value          | Enter amount                    | Yes      |
 | payment_method | Value should be `bank` or `cash`| Yes      |
 
+
+##Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of request body
 
 ```json
@@ -34,11 +44,3 @@ Example of request body
     "value": 100000,
     "payment_method": "bank"
 }
-
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

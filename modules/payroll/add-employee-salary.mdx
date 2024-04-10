@@ -28,6 +28,16 @@ description: "Endpoint for adding employee salary."
 | item_id       | Enter item id                   | Yes      |
 | amount        | Enter amount                    | Yes      |
 
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of Request Body
 
  ```json
@@ -48,11 +58,3 @@ Example of Request Body
                 }
             ]
     }
-
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

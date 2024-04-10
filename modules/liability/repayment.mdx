@@ -22,6 +22,16 @@ description: "Endpoint for making liability repayment."
 | liability_number | Enter liability number   | Yes      |
 | payment_method   | Enter payment method. Value should either be `cash` or `bank`   | Yes      |
 
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Below is an example of json request body
 
 ```json
@@ -32,10 +42,3 @@ Below is an example of json request body
        "payment_method":"bank"
     }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

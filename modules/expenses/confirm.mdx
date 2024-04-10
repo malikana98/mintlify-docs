@@ -21,13 +21,6 @@ description: "Confirming Expense"
 | expense_number | Enter the expense number        | Yes      |
 | action        | Value should be `confirmed` or `declined` | Yes      |
 
-Example JSON request body:
-```json
-{
-    "expense_number": 1,
-    "action": "confirmed"
-}
-
 
 ## Response Codes
 
@@ -36,3 +29,14 @@ Example JSON request body:
 | 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+
+
+Example JSON request body:
+```json
+{
+    "expense_number": 1,
+    "action": "confirmed"
+}
+
+
+

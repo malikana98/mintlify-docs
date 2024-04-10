@@ -21,12 +21,6 @@ description: "Confirming Salaries"
 | salary_id| Enter the salary id    | Yes      |
 | action   | Value should either be `confirmed` or `declined`   | Yes      |
 
-Example of json body
-```json
-    {
-     "salary_id":1,
-     "action":"confirmed"
-    }
 
 ## Response Codes
 
@@ -35,3 +29,12 @@ Example of json body
 | 200  | Successful                         |
 | 500  | Internal Server Error              |
 | 401  | Unauthorized: Check error message  |
+
+
+Example of json body
+```json
+    {
+     "salary_id":1,
+     "action":"confirmed"
+    }
+

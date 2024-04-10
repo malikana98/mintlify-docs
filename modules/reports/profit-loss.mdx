@@ -21,6 +21,15 @@ description: "Endpoint for accessing income statement"
 | starting_date | Starting date                   | Yes      |
 | ending_date   | Ending date                     | Yes      |
 
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example of a JSON Request Body
 
   ```json 
@@ -29,11 +38,4 @@ Example of a JSON Request Body
     "ending_date":"2024-12-01"
     }
 
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |
 

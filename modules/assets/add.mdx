@@ -26,6 +26,16 @@ description: "Endpoint for adding assets."
 | payment       | Enter payment method. Value should either be `credit`, `cash` or `bank` | Yes      |
 | supplier      | Enter supplier ID (Optional)   | No       |
 
+
+##Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 401  | Unauthorized: Check error message  |
+
+
 Example JSON Request Body:
 
 ```json
@@ -38,11 +48,3 @@ Example JSON Request Body:
   "payment": "credit"
 }
 
-
-## Response Codes
-
-| Code | Description                        |
-| ---- | ---------------------------------- |
-| 201  | Successful                         |
-| 500  | Internal Server Error              |
-| 401  | Unauthorized: Check error message  |

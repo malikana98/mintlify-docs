@@ -3,14 +3,14 @@ title: Add Expense
 description: "Endpoint for adding an expense."
 ---
 
-**URL:** `{{base_url}}/modules/expenses/addExpense`
+**URL:** `{{base_url}}/modules/expenses/addExpense`  <br />
 
-**Method:** POST
+**Method:** POST  <br />
 
-**Bearer Token:** Replace this with an actual token in the request
+**Bearer Token:** Replace this with an actual token in the request  <br />
 
 ## Headers
-**Subscription:** Replace this with the subscription value
+**Subscription:** Replace this with the subscription value  <br />
 
 **Access_Token:** Replace this with the actual access token value
 
@@ -24,6 +24,16 @@ description: "Endpoint for adding an expense."
 | amount   | Enter the amount                  | Yes      |
 | payment   | Enter payment method. Value should either be `cash`, `bank` or `credit`  | Yes      |
 | narration   | Enter narration of the expenses but not more than 500 characters | Yes      |
+
+## Response Codes
+
+| Code | Description                        |
+| ---- | ---------------------------------- |
+| 201  | Successful                         |
+| 500  | Internal Server Error              |
+| 400  | Invalid entry  |
+| 401  | Unauthorized: Check error message  |
+
 
 Example of a JSON request body:
 
